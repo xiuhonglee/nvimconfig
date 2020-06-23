@@ -1,6 +1,11 @@
 " my leader
 let mapleader = " "
 
+set number 
+set relativenumber 
+set cursorline
+set nocompatible
+
 " save
 nmap <leader>w :w!<cr>
 
@@ -46,12 +51,9 @@ let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
 let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
 
 " Colorscheme
-let g:solarized_termtrans = 1
-let g:solarized_termcolors=256
+set t_ut=
 let g:airline_theme = 'codedark'
 set background=dark
-" colorscheme peaksea
-" colorscheme solarized
 colorscheme codedark
 
 
