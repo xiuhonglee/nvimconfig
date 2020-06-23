@@ -7,11 +7,6 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-source ~/.config/nvim/plugins.vim
-
-source ~/.config/nvim/base.vim
-source ~/.config/nvim/my_configs.vim
-
 " auto reload config
 if !exists('*ReloadVimrc')
    fun! ReloadVimrc()
@@ -22,4 +17,8 @@ if !exists('*ReloadVimrc')
 endif
 autocmd! BufWritePost $MYVIMRC call ReloadVimrc()
 
+let g:mapleader = ' '
 
+source ~/.config/nvim/plugins.vim
+source ~/.config/nvim/base.vim
+source ~/.config/nvim/my_configs.vim

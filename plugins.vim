@@ -1,7 +1,7 @@
 " >>>>>>>>>>>>>>>>> plugins start <<<<<<<<<<<<<<<<<<<
 call plug#begin('~/.config/nvim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf.vim'
 
 Plug 'tomasiser/vim-code-dark'
@@ -22,9 +22,12 @@ Plug 'theniceboy/vim-snippets'
 " Undo Tree
 Plug 'mbbill/undotree'
 
+Plug 'mileszs/ack.vim'
+Plug 'yegappan/mru'
+
 " CSharp
 Plug 'OmniSharp/omnisharp-vim'
-Plug 'ctrlpvim/ctrlp.vim' , { 'for': ['cs', 'vim-plug'] } " omnisharp-vim dependency
+Plug 'ctrlpvim/ctrlp.vim'
 
 " HTML, CSS, JavaScript, PHP, JSON, etc.
 Plug 'elzr/vim-json'
@@ -47,11 +50,6 @@ Plug 'luochen1990/rainbow'
 call plug#end()
 
 " >>>>>>>>>>>>>>>>> plugins end<<<<<<<<<<<<<<<<<<<
-
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-map <leader>nn :NERDTreeToggle<CR>
-map <leader>j :CtrlP<CR>
 
 " === coc ===
 " fix the most annoying bug that coc has
@@ -127,9 +125,31 @@ imap <C-e> <Plug>(coc-snippets-expand-jump)
 " ########################  nerdtree ##############################
 
 " auto open nerdtree
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif 
+" autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif 
 
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
+map <leader>nn :NERDTreeToggle<CR>
 let NERDTreeShowHidden=0
 let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 let g:NERDTreeWinSize=30
+map <leader>nn :NERDTreeToggle<CR>
+ 
+""""""""""""""""""""""""""""""
+" => CTRL-P
+""""""""""""""""""""""""""""""
+let g:ctrlp_working_path_mode = 0
 
+let g:ctrlp_map = '<C-f>'
+map <leader>j :CtrlP<cr>
+map <C-b> :CtrlPBuffer<cr>
+
+let g:ctrlp_max_height = 20
+let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
+
+
+""""""""""""""""""""""""""""""
+" => Act
+""""""""""""""""""""""""""""""
+map <leader>g :Ack 

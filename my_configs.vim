@@ -1,5 +1,3 @@
-" my leader
-let mapleader = " "
 
 set number 
 set relativenumber 
@@ -25,15 +23,8 @@ vmap Y "+y
 noremap <C-e> 5<C-e>
 noremap <C-y> 5<C-y>
 
-" move fase between vertical/horizontal windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
-
-
 " close all in normal
-noremap Q :qall<cr>
+noremap Q :wqall<cr>
 
 
 " Open the vimrc file anytime
@@ -41,14 +32,12 @@ noremap <LEADER>e :e ~/.config/nvim/init.vim<CR>
 noremap <leader><cr> :nohl<cr>
 
 " add icons
-set encoding=utf8
-set t_Co=256
 let g:webdevicons_enable_nerdtree = 1
 set guifont=Fira\ Code:h12
-let g:webdevicons_enable_ctrlp = 1
-let g:webdevicons_enable_airline_tabline = 1
-let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
-let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
+let g:WebDevIconsUnicodeGlyphDoubleWidth = 0
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:DevIconsEnableFoldersOpenClose = 1
+" let g:webdevicons_conceal_nerdtree_brackets = 1
 
 " Colorscheme
 set t_ut=
