@@ -14,10 +14,6 @@ source ~/.config/nvim/plugins.vim
 
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 
-
-" Close the current buffer
-map <leader>bd :Bclose<cr>:tabclose<cr>gT
-
 " Insert Mode Cursor Movement
 " noremap <LEADER>dw /\(\<\w\+\>\)\_s*\1
 
