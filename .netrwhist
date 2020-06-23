@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/Users/xiuhong/.config/nvim'
+let g:netrw_dirhist_3='/Users/xiuhong/.config/coc'
+let g:netrw_dirhist_2='/Users/xiuhong/.config'
+let g:netrw_dirhist_1='/Users/xiuhong/.vim_runtime'
+let g:netrw_dirhist_0='/Users/xiuhong/.config/nvim'
+let g:netrw_dirhist_9='/Users/xiuhong/project/fliggy-play/client/src'
+let g:netrw_dirhist_8='/Users/xiuhong/.config/nvim'
+let g:netrw_dirhist_7='/Users/xiuhong/project/fliggy-play/client'
+let g:netrw_dirhist_6='/Users/xiuhong/project/fliggy-play'
+let g:netrw_dirhist_5='/Users/xiuhong/.config'
