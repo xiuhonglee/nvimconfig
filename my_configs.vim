@@ -3,6 +3,7 @@ set number
 set relativenumber 
 set cursorline
 set nocompatible
+set diffopt+=vertical
 
 " save
 nmap <leader>w :w!<cr>
@@ -10,6 +11,13 @@ nmap <leader>w :w!<cr>
 " fast move up/down
 noremap ∆ 9j
 noremap ˚ 9k
+
+" for multilple line move
+map j gj
+map k gk
+
+" togle goyo
+map <leader>z :Goyo<cr>
 
 " Faster in-line navigation
 noremap ˙ 5b
@@ -45,6 +53,7 @@ let g:airline_theme = 'codedark'
 set background=dark
 colorscheme codedark
 
+map <leader>o :BufExplorer<cr>
 
 " Resize splits with arrow keys
 noremap <up> :res +5<CR>
@@ -69,3 +78,23 @@ noremap <LEADER><LEADER> <Esc>/<++><CR>:nohlsearch<CR>c4l
 
 " find and replace
 noremap \s :%s//g<left><left>
+
+
+""""""""""""""""""""""""""""""
+" => CTRL-P
+""""""""""""""""""""""""""""""
+let g:ctrlp_working_path_mode = 0
+
+let g:ctrlp_map = '<C-f>'
+map <leader>j :CtrlP<cr>
+map <C-b> :CtrlPBuffer<cr>
+
+let g:ctrlp_max_height = 20
+let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
+
+
+""""""""""""""""""""""""""""""
+" => Act
+""""""""""""""""""""""""""""""
+" map <leader>g :Ag --ignore 'node_modules' ''<left>
+map <leader>g :Ag ''<left>

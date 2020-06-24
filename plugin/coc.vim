@@ -1,63 +1,9 @@
-" >>>>>>>>>>>>>>>>> plugins start <<<<<<<<<<<<<<<<<<<
-call plug#begin('~/.config/nvim/plugged')
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'scrooloose/nerdtree'
-Plug 'junegunn/fzf.vim'
-
-Plug 'tomasiser/vim-code-dark'
-
-" Git
-" Plug 'theniceboy/vim-gitignore', { 'for': ['gitignore', 'vim-plug'] }
-Plug 'fszymanski/fzf-gitignore', { 'do': ':UpdateRemotePlugins' }
-"Plug 'mhinz/vim-signify'
-Plug 'airblade/vim-gitgutter'
-" Plug 'Chiel92/vim-autoformat'
-
-" Taglist
-Plug 'liuchengxu/vista.vim'
-
-" snippets
-Plug 'theniceboy/vim-snippets'
-
-" Undo Tree
-Plug 'mbbill/undotree'
-
-Plug 'mileszs/ack.vim'
-Plug 'yegappan/mru'
-
-" CSharp
-Plug 'OmniSharp/omnisharp-vim'
-Plug 'ctrlpvim/ctrlp.vim'
-
-" HTML, CSS, JavaScript, PHP, JSON, etc.
-Plug 'elzr/vim-json'
-Plug 'othree/html5.vim'
-Plug 'alvan/vim-closetag'
-Plug 'yuezk/vim-js', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
-"Plug 'jaxbot/browserlink.vim'
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install_sync() }, 'for' :['markdown', 'vim-plug'] }
-Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle', 'for': ['text', 'markdown', 'vim-plug'] }
-Plug 'mzlogin/vim-markdown-toc', { 'for': ['gitignore', 'markdown', 'vim-plug'] }
-Plug 'dkarter/bullets.vim'
-
-Plug 'tpope/vim-surround'
-Plug 'jiangmiao/auto-pairs'
-
-Plug 'ryanoasis/vim-devicons'
-Plug 'mg979/vim-xtabline'
-Plug 'luochen1990/rainbow'
-
-call plug#end()
-
 " >>>>>>>>>>>>>>>>> plugins end<<<<<<<<<<<<<<<<<<<
-
 " === coc ===
 " fix the most annoying bug that coc has
 "silent! au BufEnter,BufRead,BufNewFile * silent! unmap if
 let g:coc_global_extensions = ['coc-vimlsp', 'coc-html', 'coc-json', 'coc-css', 'coc-tsserver', 'coc-snippets', 'coc-yank', 'coc-gitignore', 'coc-vimlsp', 'coc-stylelint', 'coc-tslint', 'coc-lists', 'coc-git', 'coc-explorer', 'coc-pyright', 'coc-sourcekit', 'coc-translator', 'coc-flutter', 'coc-todolist', 'coc-yaml', 'coc-tasks', 'coc-actions', 'coc-diagnostic', 'coc-prettier', 'coc-syntax', 'coc-eslint']
-"set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
-"nmap <silent> <TAB> <Plug>(coc-range-select)
-"xmap <silent> <TAB> <Plug>(coc-range-select)
+
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
 	let col = col('.') - 1
@@ -120,36 +66,3 @@ let g:coc_snippet_prev = '<c-n>'
 
 " Use <C-j> for both expand and jump (make expand higher priority.)
 imap <C-e> <Plug>(coc-snippets-expand-jump)
-
-
-" ########################  nerdtree ##############################
-
-" auto open nerdtree
-" autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif 
-
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-
-map <leader>nn :NERDTreeToggle<CR>
-let NERDTreeShowHidden=0
-let NERDTreeIgnore = ['\.pyc$', '__pycache__']
-let g:NERDTreeWinSize=30
-map <leader>nn :NERDTreeToggle<CR>
- 
-""""""""""""""""""""""""""""""
-" => CTRL-P
-""""""""""""""""""""""""""""""
-let g:ctrlp_working_path_mode = 0
-
-let g:ctrlp_map = '<C-f>'
-map <leader>j :CtrlP<cr>
-map <C-b> :CtrlPBuffer<cr>
-
-let g:ctrlp_max_height = 20
-let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
-
-
-""""""""""""""""""""""""""""""
-" => Act
-""""""""""""""""""""""""""""""
-map <leader>g :Ack 
