@@ -50,8 +50,7 @@ let g:DevIconsEnableFoldersOpenClose = 1
 " Colorscheme
 set t_ut=
 let g:airline_theme = 'codedark'
-set background=dark
-colorscheme codedark
+colorscheme hybrid
 
 map <leader>o :BufExplorer<cr>
 
@@ -98,3 +97,15 @@ let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
 """"""""""""""""""""""""""""""
 " map <leader>g :Ag --ignore 'node_modules' ''<left>
 map <leader>g :Ag ''<left>
+
+
+""""""""""""""""""""""""""""""
+" => fzf
+""""""""""""""""""""""""""""""
+map <C-p> :Files<cr>
+
+
+""""""""""""""""""""""""""""""
+" => prettier
+""""""""""""""""""""""""""""""
+map <leader>p :PrettierAsync<cr>

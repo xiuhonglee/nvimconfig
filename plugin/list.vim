@@ -1,4 +1,3 @@
-
 " >>>>>>>>>>>>>>>>> plugins start <<<<<<<<<<<<<<<<<<<
 call plug#begin('~/.config/nvim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -54,5 +53,12 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'ryanoasis/vim-devicons'
 Plug 'mg979/vim-xtabline'
 Plug 'luochen1990/rainbow'
+Plug 'mhinz/vim-startify'
+Plug 'vim-airline/vim-airline'
+Plug 'lfv89/vim-interestingwords'
+Plug 'Yggdroot/indentLine'
+Plug 'w0ng/vim-hybrid'
+Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 call plug#end()
