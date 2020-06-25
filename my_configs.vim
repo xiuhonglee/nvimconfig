@@ -1,35 +1,45 @@
-
 set number 
 set relativenumber 
 set cursorline
 set nocompatible
 set diffopt+=vertical
 
+iabbrev @@ xiuhong.lk@alibaba-inc.com
+
+" source vimrc
+noremap <leader>sv :source $MYVIMRC<cr>
+
+" delete
+inoremap <c-d> <esc>ddi
+
 " save
-nmap <leader>w :w!<cr>
+noremap <leader>s :w<cr>
+noremap <leader>w :w<cr>
 
 " fast move up/down
 noremap ∆ 9j
 noremap ˚ 9k
 
 " for multilple line move
-map j gj
-map k gk
+noremap j gj
+noremap k gk
 
 " togle goyo
-map <leader>z :Goyo<cr>
+noremap <leader>z :Goyo<cr>
 
 " Faster in-line navigation
 noremap ˙ 5b
 noremap ¬ 5e
 
 " copy to clipboard
-vmap Y "+y
-
+vnoremap Y "+y
 
 " move page up/down fase
 noremap <C-e> 5<C-e>
 noremap <C-y> 5<C-y>
+
+noremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
+noremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
 
 " close all in normal
 noremap Q :wqall<cr>
@@ -45,14 +55,13 @@ set guifont=Fira\ Code:h12
 let g:WebDevIconsUnicodeGlyphDoubleWidth = 0
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:DevIconsEnableFoldersOpenClose = 1
-" let g:webdevicons_conceal_nerdtree_brackets = 1
 
 " Colorscheme
 set t_ut=
 let g:airline_theme = 'codedark'
 colorscheme hybrid
 
-map <leader>o :BufExplorer<cr>
+noremap <leader>o :BufExplorer<cr>
 
 " Resize splits with arrow keys
 noremap <up> :res +5<CR>
@@ -85,8 +94,8 @@ noremap \s :%s//g<left><left>
 let g:ctrlp_working_path_mode = 0
 
 let g:ctrlp_map = '<C-f>'
-map <leader>j :CtrlP<cr>
-map <C-b> :CtrlPBuffer<cr>
+noremap <leader>j :CtrlP<cr>
+noremap <C-b> :CtrlPBuffer<cr>
 
 let g:ctrlp_max_height = 20
 let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
@@ -96,16 +105,16 @@ let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
 " => Act
 """"""""""""""""""""""""""""""
 " map <leader>g :Ag --ignore 'node_modules' ''<left>
-map <leader>g :Ag ''<left>
+noremap <leader>g :Ag ''<left>
 
 
 """"""""""""""""""""""""""""""
 " => fzf
 """"""""""""""""""""""""""""""
-map <C-p> :Files<cr>
+noremap <C-p> :Files<cr>
 
 
 """"""""""""""""""""""""""""""
 " => prettier
 """"""""""""""""""""""""""""""
-map <leader>p :PrettierAsync<cr>
+noremap <leader>p :PrettierAsync<cr>
