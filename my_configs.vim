@@ -4,6 +4,8 @@ set cursorline
 set nocompatible
 set diffopt+=vertical
 
+set conceallevel=0
+
 iabbrev @@ xiuhong.lk@alibaba-inc.com
 
 " source vimrc
@@ -58,16 +60,19 @@ let g:DevIconsEnableFoldersOpenClose = 1
 
 " Colorscheme
 set t_ut=
+set encoding=UTF-8
 let g:airline_theme = 'codedark'
 colorscheme hybrid
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+set termencoding=utf-8
 
 noremap <leader>o :BufExplorer<cr>
 
 " Resize splits with arrow keys
-noremap <up> :res +5<CR>
-noremap <down> :res -5<CR>
-noremap <left> :vertical resize-5<CR>
-noremap <right> :vertical resize+5<CR>
+noremap <up> :res -5<CR>
+noremap <down> :res +5<CR>
+noremap <left> :vertical resize+5<CR>
+noremap <right> :vertical resize-5CR>
 
 " Place the two screens up and down
 noremap sh <C-w>t<C-w>K
@@ -118,3 +123,13 @@ noremap <C-p> :Files<cr>
 " => prettier
 """"""""""""""""""""""""""""""
 noremap <leader>p :PrettierAsync<cr>
+
+
+let g:vim_json_conceal=2
+let g:vim_json_syntax_conceal=0
+
+
+""""""""""""""""""""""""""""""
+" => comment
+""""""""""""""""""""""""""""""
+noremap <leader>/ :<leader>c<leader><cr>

@@ -2,6 +2,7 @@
 call plug#begin('~/.config/nvim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
+Plug 'preservim/nerdcommenter'
 
 " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf'
@@ -60,5 +61,6 @@ Plug 'Yggdroot/indentLine'
 Plug 'w0ng/vim-hybrid'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'elzr/vim-json'
 
 call plug#end()
