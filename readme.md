@@ -18,6 +18,7 @@
 
 ```shell
 $ python3 -m pip install --user --upgrade pynvim 
+$ python  -m pip install --user --upgrade pynvim
 ```
 
 ### Tips
@@ -30,9 +31,20 @@ step2 > :call mkdp#util#install();
 ```
 
 #### 2. switch Comments
+
 ```shell
 1. comment:   <lead>cs
 2. uncomment: <lead>cu
 3. toggle comment style: <lead>ca
 ```
 
+
+#### 3. upgrade ruby on macox
+```shell
+$ brew update
+$ brew install ruby-build
+$ brew install rbenv
+
+$ rbenv install 3.0.0
+$ rbenv global 3.0.0
+```
