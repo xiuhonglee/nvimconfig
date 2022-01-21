@@ -128,3 +128,9 @@ noremap <leader>p :PrettierAsync<cr>
 let g:vim_json_conceal=2
 let g:vim_json_syntax_conceal=0
 
+
+""""""""""""""""""""""""""""""
+" => nerdcommenter
+""""""""""""""""""""""""""""""
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1

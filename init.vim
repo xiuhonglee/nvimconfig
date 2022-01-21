@@ -28,7 +28,6 @@ let g:ruby_host_prog = 'rvm system do neovim-ruby-host'
 
 source ~/.config/nvim/plugin/list.vim
 source ~/.config/nvim/plugin/coc.vim
-
 source ~/.config/nvim/base.vim
 source ~/.config/nvim/my_configs.vim
 
