@@ -12,7 +12,6 @@ Plug 'tomasiser/vim-code-dark'
 Plug 'junegunn/goyo.vim'
 Plug 'vim-scripts/bufexplorer.zip'
 " Git
-" Plug 'theniceboy/vim-gitignore', { 'for': ['gitignore', 'vim-plug'] }
 Plug 'tpope/vim-fugitive'
 " Plug 'fszymanski/fzf-gitignore', { 'do': ':UpdateRemotePlugins' }
 "Plug 'mhinz/vim-signify'
@@ -24,14 +23,15 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'liuchengxu/vista.vim'
 
 " snippets
-Plug 'theniceboy/vim-snippets'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 " Undo Tree
 Plug 'mbbill/undotree'
 
 Plug 'mileszs/ack.vim'
 Plug 'yegappan/mru'
-Plug 'rking/ag.vim'
+
 
 " CSharp
 Plug 'OmniSharp/omnisharp-vim'
@@ -62,5 +62,7 @@ Plug 'w0ng/vim-hybrid'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'elzr/vim-json'
+
+Plug 'junegunn/vim-peekaboo'
 
 call plug#end()
