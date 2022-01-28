@@ -24,6 +24,9 @@ iabbrev xhem -- <cr>xiuhong<cr>hz_likun@zju.edu.cn
 
 noremap <leader>sv :source $MYVIMRC<cr>
 
+" close current buffer
+noremap <leader>x :bd<cr>
+
 " save
 noremap <leader>s :w<cr>
 noremap <leader>w :w<cr>
@@ -145,9 +148,9 @@ let g:vim_json_conceal=2
 let g:vim_json_syntax_conceal=0
 
 
-""""""""""""""""""""""""""""""
-" => nerdcommenter
-"
+"""""""""""""""""""
+"  nerdcommenter  "
+"""""""""""""""""""
 " [count]<leader>cs | NERDCommenterSexy
 " [count]<leader>cu | NERDCommenterUncomment
 " [count]<leader>cy |NERDCommenterYank
@@ -170,13 +173,25 @@ let g:NERDAltDelims_javascript = 1
 
 
 
-""""""""""""""""""""""""""""""
-" => snippets
-"
+""""""""""""""
+"  snippets  "
+""""""""""""""
 let g:UltiSnipsExpandTrigger="<tab>"
 " list all snippets for current filetype
 let g:UltiSnipsListSnippets="<c-l>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.config/nvim/mysnippets', 'UltiSnips']
 """"""""""""""""""""""""""""""
+
+
+""""""""""""""
+"  undotree  "
+""""""""""""""
+if !exists('g:undotree_SetFocusWhenToggle')
+    let g:undotree_SetFocusWhenToggle = 1
+endif
+if !exists('g:undotree_WindowLayout')
+    let g:undotree_WindowLayout = 4
+endif

@@ -1,0 +1,8 @@
+snippet dbg "console.log debugger" b
+console.log('%c[Debugger] [${1:info}]: %c%s', 
+'color: yellow; background: #333', 
+'color: #1c87c9; background: #ccc',
+\` ${$1}\`
+);
+endsnippet
+
