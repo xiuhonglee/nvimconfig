@@ -54,3 +54,6 @@ $ brew install rbenv
 $ rbenv install 3.0.0
 $ rbenv global 3.0.0
 ```
+
+#### 4. prettier config
+[coc prettier](https://github.com/neoclide/coc-prettier)
