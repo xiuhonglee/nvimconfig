@@ -141,7 +141,7 @@ noremap <C-p> :Files<cr>
 """"""""""""""""""""""""""""""
 " => prettier
 """"""""""""""""""""""""""""""
-noremap <leader>p :PrettierAsync<cr>
+noremap <leader>p :CocCommand prettier.forceFormatDocument<cr>
 
 
 let g:vim_json_conceal=2
