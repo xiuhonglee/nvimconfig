@@ -33,6 +33,8 @@ Plug 'mileszs/ack.vim'
 Plug 'yegappan/mru'
 
 
+Plug 'junegunn/vim-easy-align'
+
 " CSharp
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'ctrlpvim/ctrlp.vim'

@@ -91,8 +91,11 @@ noremap <LEADER><LEADER> <Esc>/<++><CR>:nohlsearch<CR>c4l
 " find and replace
 noremap \s :%s//g<left><left>
 
+" choose current world
 noremap Y viw
 
+" close all buffers except current
+nnoremap <leader>sa :w <bar> %bd <bar> e# <bar> bd# <CR>
 
 " copy to clipboard
 vnoremap Y "+y
@@ -195,3 +198,10 @@ endif
 if !exists('g:undotree_WindowLayout')
     let g:undotree_WindowLayout = 4
 endif
+
+""""""""""""""""""""""
+"  vim easy align  "
+""""""""""""""""""""""
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+
