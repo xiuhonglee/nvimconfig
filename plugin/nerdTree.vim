@@ -9,8 +9,8 @@ nnoremap <leader>nn :NERDTreeToggle<CR>
 " autocmd vimEnter * NERDTree
 " autocmd VimEnter * NERDTree | wincmd p
 
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
 
 
 " Start NERDTree. If a file is specified, move the cursor to its window.

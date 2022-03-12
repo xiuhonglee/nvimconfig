@@ -53,6 +53,8 @@ Plug 'dkarter/bullets.vim'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 
+Plug 'morhetz/gruvbox'
+
 Plug 'ryanoasis/vim-devicons'
 Plug 'mg979/vim-xtabline'
 Plug 'luochen1990/rainbow'

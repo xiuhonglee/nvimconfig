@@ -12,7 +12,18 @@ set splitright
 set t_ut=
 set encoding=UTF-8
 let g:airline_theme = 'codedark'
-colorscheme hybrid
+let g:airline#extensions#tabline#enabled = 1
+
+""""""""""""""""""""""
+"  color theme  "
+""""""""""""""""""""""
+colorscheme gruvbox
+" let g:gruvbox_contrast_dark='soft'
+" let g:gruvbox_contrast_dark='medium'
+let g:gruvbox_contrast_dark='hard'
+
+let g:gruvbox_contrast_light='hard'
+
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 
 iabbrev @@ hn_likun@zju.edu.cn
@@ -42,6 +53,7 @@ noremap k gk
 
 " togle goyo
 noremap <leader>z :Goyo<cr>
+let g:goyo_width=100
 
 " Faster in-line navigation
 noremap ˙ 5b
@@ -204,4 +216,21 @@ endif
 """"""""""""""""""""""
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
+
+
+""""""""""""""""""""""
+"  word count  "
+""""""""""""""""""""""
+" let g:word_count=wordcount().words
+" function WordCount()
+"     if has_key(wordcount(),'visual_words')
+"         let g:word_count=wordcount().visual_words."/".wordcount().words " count selected words
+"     else
+"         let g:word_count=wordcount().cursor_words."/".wordcount().words " or shows words 'so far'
+"     endif
+"     return g:word_count
+" endfunction
+
+" set statusline+=\ w:%{WordCount()},
+" set laststatus=2 " show the statusline
 
