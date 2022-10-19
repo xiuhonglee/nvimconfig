@@ -30,3 +30,4 @@ source ~/.config/nvim/plugin/coc.vim
 source ~/.config/nvim/base.vim
 source ~/.config/nvim/my_configs.vim
 
+

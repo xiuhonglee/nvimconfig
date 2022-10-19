@@ -6,6 +6,33 @@ console.log('%c[Debugger] [${1:info}]: %c%s',
 );
 endsnippet
 
+snippet sout "console log with parameter" b
+console.log('[ ${1:parameter} ]: ', $1)
+endsnippet
+
+
+snippet div "<div> tag" b
+<div className="${1:cls}"></div>
+endsnippet
+
+
+snippet span "<span> tag" b
+<span className="${1:cls}"></span>
+endsnippet
+
+
+snippet ii "<i> tag" b
+<i className="${1:cls}"></i>
+endsnippet
+
+snippet ii/ "<i>  single close tag" b
+<i className="${1:cls}" />
+endsnippet
+
+
+snippet img/ "<img />  single close tag" b
+<img className="${1:cls}" src="${2:src}" alt="img" />
+endsnippet
 
 
 # snippet get "Get Elements"

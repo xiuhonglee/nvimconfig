@@ -17,7 +17,30 @@ let g:airline#extensions#tabline#enabled = 1
 """"""""""""""""""""""
 "  color theme  "
 """"""""""""""""""""""
+
+" Important!!
+if has('termguicolors')
+  set termguicolors
+endif
+
+" For dark version.
+set background=dark
+
+" For light version.
+" set background=light
+
+" Set contrast.
+" This configuration option should be placed before `colorscheme gruvbox-material`.
+" Available values: 'hard', 'medium'(default), 'soft'
+let g:gruvbox_material_background = 'hard'
+
+" For better performance
+let g:gruvbox_material_better_performance = 1
+
+"colorscheme gruvbox-material
+
 colorscheme gruvbox
+
 " let g:gruvbox_contrast_dark='soft'
 " let g:gruvbox_contrast_dark='medium'
 let g:gruvbox_contrast_dark='hard'
@@ -30,6 +53,7 @@ iabbrev @@ hn_likun@zju.edu.cn
 iabbrev hw hello world
 iabbrev xh xiu hong
 iabbrev waht what
+iabbrev tiem time
 iabbrev tehn then
 iabbrev xhem -- <cr>xiuhong<cr>hz_likun@zju.edu.cn
 
@@ -39,13 +63,15 @@ noremap <leader>sv :source $MYVIMRC<cr>
 noremap <leader>x :bd<cr>
 
 " save
-noremap <leader>s :w<cr>
-noremap <leader>w :w<cr>
+noremap <leader>s :wall<cr>
+noremap <leader>w :wall<cr>
 
 
 " fast move up/down
 noremap ∆ 9j
 noremap ˚ 9k
+noremap 3 4j
+noremap 4 4k
 
 " for multilple line move
 noremap j gj
@@ -56,8 +82,8 @@ noremap <leader>z :Goyo<cr>
 let g:goyo_width=100
 
 " Faster in-line navigation
-noremap ˙ 5b
-noremap ¬ 5e
+noremap ˙ 3b
+noremap ¬ 3e
 
 " move page up/down fase
 noremap <C-e> 5<C-e>
@@ -71,6 +97,8 @@ noremap <leader>[ viw<esc>a]<esc>hbi[<esc>lel
 
 " close all in normal
 noremap Q :wqall<cr>
+
+noremap <leader>b :Explore<cr>
 
 " Open the vimrc file anytime
 noremap <leader>e :vsplit ~/.config/nvim/my_configs.vim<CR>
@@ -118,7 +146,7 @@ inoremap jk <esc>
 
 " add icons
 let g:webdevicons_enable_nerdtree = 1
-set guifont=Fira\ Code:h12
+" set guifont=Fira\ Code:h12
 let g:WebDevIconsUnicodeGlyphDoubleWidth = 0
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:DevIconsEnableFoldersOpenClose = 1
@@ -156,7 +184,7 @@ noremap <C-p> :Files<cr>
 """"""""""""""""""""""""""""""
 " => prettier
 """"""""""""""""""""""""""""""
-noremap <leader>p :CocCommand prettier.forceFormatDocument<cr>
+noremap <leader>F :CocCommand prettier.forceFormatDocument<cr>
 
 
 let g:vim_json_conceal=2
@@ -172,34 +200,32 @@ let g:vim_json_syntax_conceal=0
 "
 """"""""""""""""""""""""""""""
 " Add spaces after comment delimiters by default
-let g:NERDSpaceDelims = 1 
+" let g:NERDSpaceDelims = 1 
 
 " Enable trimming of trailing whitespace when uncommenting
-let g:NERDTrimTrailingWhitespace = 1
+" let g:NERDTrimTrailingWhitespace = 1
 
 " Align line-wise comment delimiters flush left instead of following code indentation
-let g:NERDDefaultAlign = 'left'
+" let g:NERDDefaultAlign = 'left'
 
 " Use compact syntax for prettified multi-line comments
-let g:NERDCompactSexyComs = 1
+" let g:NERDCompactSexyComs = 1
 
 " Set a language to use its alternate delimiters by default
-let g:NERDAltDelims_javascript = 1
-
-
+" let g:NERDAltDelims_javascript = 1
 
 """"""""""""""
 "  snippets  "
 """"""""""""""
-let g:UltiSnipsExpandTrigger="<tab>"
+"let g:UltiSnipsExpandTrigger="<tab>"
 " list all snippets for current filetype
-let g:UltiSnipsListSnippets="<c-l>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsSnippetDirectories=[$HOME.'/.config/nvim/mysnippets', 'UltiSnips']
+"let g:UltiSnipsListSnippets="<c-l>"
+"let g:UltiSnipsJumpForwardTrigger="<c-j>"
+"let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+"let g:UltiSnipsEditSplit="vertical"
+"let g:UltiSnipsSnippetDirectories=[$HOME.'/.config/nvim/mysnippets', 'UltiSnips']
+"let g:UltiSnipsSnippetDirectories=['UltiSnips']
 """"""""""""""""""""""""""""""
-
 
 """"""""""""""
 "  undotree  "
@@ -216,6 +242,20 @@ endif
 """"""""""""""""""""""
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
+
+" this is required for mark names to persist between editor sessions
+if has('nvim')
+    set shada+=!
+else
+    set viminfo+=!
+endif
+
+
+"""""""""""""
+"  ctags  "
+"""""""""""""
+let g:gutentags_project_root = ['package.json', '.git']
+let g:gutentags_ctags_exclude = ['tags', 'node_modules', 'example', 'bin', 'build', 'dist', '*.json', '*.md', '.lock', '*.map', '*.min.*', '*.max.*', '*.css', '*.less', '*.scss', '*.bmp', '*.swap', '*.rar', '*.zip', '*.tar', '*.tar.gz', '*.tar.xz', '*.tar.bz2', '*.pdf', '*.doc', '*.docx', '*.ppt', '*.pptx']
 
 
 """"""""""""""""""""""

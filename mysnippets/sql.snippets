@@ -1,0 +1,22 @@
+snippet crt "VARCHAR" b
+CREATE TABLE ${1:tb_} (
+    id SERIAL,
+);
+endsnippet
+
+
+snippet pk "VARCHAR" b
+PRIMARY KEY (id)
+endsnippet
+
+snippet aint "VARCHAR" b
+${1:key} INTEGER NOT NULL,
+endsnippet
+
+snippet astring "VARCHAR" b
+${1:key} VARCHAR(${2:100}) NOT NULL,
+endsnippet
+
+snippet not "NOT NULL" b
+NOT NULL,
+endsnippet

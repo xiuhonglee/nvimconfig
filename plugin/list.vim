@@ -1,7 +1,7 @@
 " >>>>>>>>>>>>>>>>> plugins start <<<<<<<<<<<<<<<<<<<
 call plug#begin('~/.config/nvim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'scrooloose/nerdtree'
+" Plug 'scrooloose/nerdtree'
 Plug 'preservim/nerdcommenter'
 
 " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -16,7 +16,7 @@ Plug 'tpope/vim-fugitive'
 " Plug 'fszymanski/fzf-gitignore', { 'do': ':UpdateRemotePlugins' }
 "Plug 'mhinz/vim-signify'
 Plug 'airblade/vim-gitgutter'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+" Plug 'Xuyuanp/nerdtree-git-plugin'
 " Plug 'Chiel92/vim-autoformat'
 
 " Taglist
@@ -34,6 +34,8 @@ Plug 'yegappan/mru'
 
 
 Plug 'junegunn/vim-easy-align'
+
+Plug 'kshenoy/vim-signature'
 
 " CSharp
 Plug 'OmniSharp/omnisharp-vim'
@@ -54,6 +56,7 @@ Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 
 Plug 'morhetz/gruvbox'
+Plug 'sainnhe/gruvbox-material'
 
 Plug 'ryanoasis/vim-devicons'
 Plug 'mg979/vim-xtabline'
@@ -68,5 +71,7 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'elzr/vim-json'
 
 Plug 'junegunn/vim-peekaboo'
+
+Plug 'ludovicchabant/vim-gutentags'
 
 call plug#end()
