@@ -4,6 +4,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'scrooloose/nerdtree'
 Plug 'preservim/nerdcommenter'
 
+Plug 'liuchengxu/eleline.vim'
+
 " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
@@ -69,6 +71,8 @@ Plug 'w0ng/vim-hybrid'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'elzr/vim-json'
+
+ Plug 'francoiscabrol/ranger.vim'
 
 Plug 'junegunn/vim-peekaboo'
 

@@ -86,7 +86,7 @@ nmap <leader>a  <Plug>(coc-codeaction-selected)
 " Remap keys for applying codeAction to the current buffer.
 nmap <leader>ac  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
-nmap <leader>qf  <Plug>(coc-fix-current)
+nmap <leader>;  <Plug>(coc-fix-current)
 
 " Run the Code Lens action on the current line.
 " nmap <leader>cl  <Plug>(coc-codelens-action)
@@ -140,7 +140,7 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 nnoremap <silent><nowait> ,c  :<C-u>CocList commands<cr>
 
 " Find symbol of current document.
-" nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
+ nnoremap <silent><nowait> ,o  :<C-u>CocList outline<cr>
 " Search workspace symbols.
 " nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
